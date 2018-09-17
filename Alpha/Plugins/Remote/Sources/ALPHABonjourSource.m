@@ -82,7 +82,7 @@
     
     self.completion = completion;
     
-    //ALPHALog(@"SETTING COMPLETION: %@", completion);
+    ALPHALog(@"SETTING COMPLETION: %@", completion);
     
     NSError* error = nil;
     
@@ -95,11 +95,12 @@
     
     if (error)
     {
-        //ALPHALog(@"Error sending object: %@", error);
+        ALPHALog(@"Error sending object: %@", error);
         
         if (completion)
         {
             completion(nil, error);
+            self.completion = nil;
         }
     }
 }
@@ -140,6 +141,8 @@
     object.object = action;
     self.completion = completion;
     
+    ALPHALog(@"SETTING COMPLETION: %@", completion);
+    
     NSError* error = nil;
     
     if (![self.connection isOpen])
@@ -156,6 +159,7 @@
         if (completion)
         {
             completion(nil, error);
+            self.completion = nil;
         }
     }
 }

@@ -5,4 +5,5 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'UICatalog' do
   pod 'FXKeychain'
+  pod 'MLeaksFinder'
 end
