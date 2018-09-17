@@ -31,6 +31,8 @@
 
 #import "ALPHANetworkModel.h"
 
+#import "AlphaDefines.h"
+
 NSString *const ALPHANetworkDataIdentifier = @"com.unifiedsense.alpha.data.network";
 
 @interface __NSCFURLSessionConnection_Swizzles : NSObject
@@ -206,7 +208,7 @@ NSString *const ALPHANetworkDataIdentifier = @"com.unifiedsense.alpha.data.netwo
 {
     Class cfURLSessionConnectionClass = NSClassFromString(@"__NSCFURLSessionConnection");
     if (!cfURLSessionConnectionClass) {
-        NSLog(@"Could not find __NSCFURLSessionConnection");
+        ALPHALog(@"Could not find __NSCFURLSessionConnection");
         return;
     }
     
@@ -229,7 +231,7 @@ NSString *const ALPHANetworkDataIdentifier = @"com.unifiedsense.alpha.data.netwo
         
         NSAssert(originalImp, @"Must find imp");
         
-        //NSLog(@"SWIZZLING: %@ with %@", sourceMethodName, originalMethodName);
+        //ALPHALog(@"SWIZZLING: %@ with %@", sourceMethodName, originalMethodName);
         
         BOOL success = class_addMethod(cfURLSessionConnectionClass, sourceMethod, originalImp, encoding);
         
@@ -238,7 +240,7 @@ NSString *const ALPHANetworkDataIdentifier = @"com.unifiedsense.alpha.data.netwo
 
         if (!success)
         {
-            NSLog(@"Alpha: Failed to swizzle - %@", sourceMethodName);
+            ALPHALog(@"Alpha: Failed to swizzle - %@", sourceMethodName);
         }
         
         // TODO: Check if replaced imp in case of redirectRequest.
@@ -830,7 +832,7 @@ NSString *const ALPHANetworkDataIdentifier = @"com.unifiedsense.alpha.data.netwo
             NSURLRequest *request = [self requestForConnection:connection];
             if (!request && [connection respondsToSelector:@selector(currentRequest)]) {
                 
-                NSLog(@"Alpha Warning: -[ALPHANetworkSource connection:willSendRequest:redirectResponse:] not called, request timestamp may be inaccurate. See Known Issues in the README for more information.");
+                ALPHALog(@"Alpha Warning: -[ALPHANetworkSource connection:willSendRequest:redirectResponse:] not called, request timestamp may be inaccurate. See Known Issues in the README for more information.");
                 
                 request = connection.currentRequest;
                 [self setRequest:request forConnection:connection];
@@ -938,7 +940,7 @@ NSString *const ALPHANetworkDataIdentifier = @"com.unifiedsense.alpha.data.netwo
             static BOOL hasLoggedTimestampWarning = NO;
             if (!hasLoggedTimestampWarning) {
                 hasLoggedTimestampWarning = YES;
-                NSLog(@"Alpha Warning: Some requests' timestamps may be inaccurate. See Known Issues in the README for more information.");
+                ALPHALog(@"Alpha Warning: Some requests' timestamps may be inaccurate. See Known Issues in the README for more information.");
             }
             /// We need to set headers from the session configuration
             NSMutableURLRequest *request = [dataTask.currentRequest mutableCopy];

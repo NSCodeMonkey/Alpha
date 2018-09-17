@@ -48,7 +48,7 @@ NSString *const ALPHAKeychainDataIdentifier = @"com.unifiedsense.alpha.data.keyc
 
         if (result != NULL)
         {
-            //NSLog(@"REsult: %@", result);
+            //ALPHALog(@"REsult: %@", result);
             
             [items addObject:[[ALPHAKeychainItem alloc] initWithDictionary:[item firstObject]]];
             CFRelease(result);

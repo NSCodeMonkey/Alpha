@@ -44,6 +44,8 @@
 
 #import "ALPHASerialization.h"
 
+#import "AlphaDefines.h"
+
 #pragma GCC diagnostic ignored "-Wgnu"
 
 static NSString *const ALPHASerializationException = @"ALPHASerializationException";
@@ -61,19 +63,19 @@ static NSString *const ALPHASerializationException = @"ALPHASerializationExcepti
     SEL deprecatedSelector = NSSelectorFromString(@"codableKeys");
     if ([self respondsToSelector:deprecatedSelector] || [self instancesRespondToSelector:deprecatedSelector])
     {
-        NSLog(@"AutoCoding Warning: codableKeys method is no longer supported. Use codableProperties instead.");
+        ALPHALog(@"AutoCoding Warning: codableKeys method is no longer supported. Use codableProperties instead.");
     }
     deprecatedSelector = NSSelectorFromString(@"uncodableKeys");
     if ([self respondsToSelector:deprecatedSelector] || [self instancesRespondToSelector:deprecatedSelector])
     {
-        NSLog(@"AutoCoding Warning: uncodableKeys method is no longer supported. Use ivars, or synthesize your properties using non-KVC-compliant names to avoid coding them instead.");
+        ALPHALog(@"AutoCoding Warning: uncodableKeys method is no longer supported. Use ivars, or synthesize your properties using non-KVC-compliant names to avoid coding them instead.");
     }
     deprecatedSelector = NSSelectorFromString(@"uncodableProperties");
     NSArray *uncodableProperties = nil;
     if ([self respondsToSelector:deprecatedSelector] || [self instancesRespondToSelector:deprecatedSelector])
     {
         uncodableProperties = [self valueForKey:@"uncodableProperties"];
-        NSLog(@"AutoCoding Warning: uncodableProperties method is no longer supported. Use ivars, or synthesize your properties using non-KVC-compliant names to avoid coding them instead.");
+        ALPHALog(@"AutoCoding Warning: uncodableProperties method is no longer supported. Use ivars, or synthesize your properties using non-KVC-compliant names to avoid coding them instead.");
     }
     
     unsigned int propertyCount;

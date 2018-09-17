@@ -3,12 +3,13 @@
 //  Copyright © 2015 Pinterest. All rights reserved.
 
 #import "ALPHADiskCache.h"
+#import "AlphaDefines.h"
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0
 #import <UIKit/UIKit.h>
 #endif
 
-#define ALPHADiskCacheError(error) if (error) { NSLog(@"%@ (%d) ERROR: %@", \
+#define ALPHADiskCacheError(error) if (error) { ALPHALog(@"%@ (%d) ERROR: %@", \
 [[NSString stringWithUTF8String:__FILE__] lastPathComponent], \
 __LINE__, [error localizedDescription]); }
 

@@ -10,6 +10,7 @@
 
 #import "ALPHABonjourSource.h"
 #import "ALPHANetworkObject.h"
+#import "AlphaDefines.h"
 
 @interface ALPHABonjourSource () <ALPHABonjourDataConnectionDelegate>
 
@@ -64,7 +65,7 @@
     
     if (error)
     {
-        NSLog(@"Error sending object: %@", error);
+        ALPHALog(@"Error sending object: %@", error);
         
         if (completion)
         {
@@ -81,7 +82,7 @@
     
     self.completion = completion;
     
-    //NSLog(@"SETTING COMPLETION: %@", completion);
+    //ALPHALog(@"SETTING COMPLETION: %@", completion);
     
     NSError* error = nil;
     
@@ -94,7 +95,7 @@
     
     if (error)
     {
-        //NSLog(@"Error sending object: %@", error);
+        //ALPHALog(@"Error sending object: %@", error);
         
         if (completion)
         {
@@ -122,7 +123,7 @@
     
     if (error)
     {
-        NSLog(@"Error sending object: %@", error);
+        ALPHALog(@"Error sending object: %@", error);
         
         if (completion)
         {
@@ -150,7 +151,7 @@
     
     if (error)
     {
-        NSLog(@"Error sending object: %@", error);
+        ALPHALog(@"Error sending object: %@", error);
         
         if (completion)
         {
@@ -167,12 +168,12 @@
     // Check if it errored
     //
     
-    NSLog(@"CLIENT RECEIVED OBJECT: %@", object);
+    ALPHALog(@"CLIENT RECEIVED OBJECT: %@", object);
     
     id serializedObject = object.object;
     
-    NSLog(@"CLIENT SERIALIZED: %@", serializedObject);
-    NSLog(@"COMPLETION: %@", self.completion);
+    ALPHALog(@"CLIENT SERIALIZED: %@", serializedObject);
+    ALPHALog(@"COMPLETION: %@", self.completion);
     
     if (object.error)
     {

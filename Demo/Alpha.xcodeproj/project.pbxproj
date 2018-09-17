@@ -367,6 +367,8 @@
 		535682BE18F3670300BAAD62 /* AAPLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535682A418F3670300BAAD62 /* AAPLWebViewController.m */; };
 		535682BF18F3670300BAAD62 /* UIColor+AAPLApplicationSpecific.m in Sources */ = {isa = PBXBuildFile; fileRef = 535682A618F3670300BAAD62 /* UIColor+AAPLApplicationSpecific.m */; };
 		53874F9918F36B1800510922 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53874F9718F36B1800510922 /* Localizable.strings */; };
+		B7D722A8214FAAAA006D7F1B /* ALPHAWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D722A6214FAAA9006D7F1B /* ALPHAWeakProxy.m */; };
+		B7D722A9214FAAAA006D7F1B /* ALPHAWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B7D722A7214FAAAA006D7F1B /* ALPHAWeakProxy.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1057,6 +1059,8 @@
 		67E64FF512FD6A8D0D3560ED /* ALPHAServerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPHAServerPlugin.m; sourceTree = "<group>"; };
 		67E64FFDA2B5BB9190C09693 /* NSInvocation+Argument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Argument.h"; sourceTree = "<group>"; };
 		B7378A6E214F998D0028BF1B /* AlphaDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlphaDefines.h; sourceTree = "<group>"; };
+		B7D722A6214FAAA9006D7F1B /* ALPHAWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPHAWeakProxy.m; sourceTree = "<group>"; };
+		B7D722A7214FAAAA006D7F1B /* ALPHAWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPHAWeakProxy.h; sourceTree = "<group>"; };
 		D448E8D75468D126D21BFDDF /* Pods-UICatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-UICatalog/Pods-UICatalog.release.xcconfig"; sourceTree = "<group>"; };
 		FEDA7AAE1B5C12E000BB35FD /* ALPHAApplicationPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPHAApplicationPlugin.h; sourceTree = "<group>"; };
 		FEDA7AAF1B5C12E000BB35FD /* ALPHAApplicationPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPHAApplicationPlugin.m; sourceTree = "<group>"; };
@@ -2747,6 +2751,8 @@
 		67E64FCD89FAB3D066BEB917 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				B7D722A7214FAAAA006D7F1B /* ALPHAWeakProxy.h */,
+				B7D722A6214FAAA9006D7F1B /* ALPHAWeakProxy.m */,
 				67E644D2A41A7816140B1483 /* ALPHAUtility.h */,
 				67E6434E5B2861CEFEA82FC3 /* ALPHAUtility.m */,
 				67E6493FB736EE1508AE067B /* ALPHAFileManager.h */,
@@ -2831,6 +2837,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38614DF71DFEBD34001D3209 /* ALPHABonjourServer.h in Headers */,
+				B7D722A9214FAAAA006D7F1B /* ALPHAWeakProxy.h in Headers */,
 				38614DEF1DFEBCEB001D3209 /* ALPHABonjourDataChunk.h in Headers */,
 				38614DFB1DFEBD45001D3209 /* NSScanner+Bonjour.h in Headers */,
 				38614DF31DFEBCFB001D3209 /* ALPHABonjourDataConnection.h in Headers */,
@@ -3351,6 +3358,7 @@
 				389CBE831DEE042D00D3F99C /* ALPHADefaultsRendererViewController.m in Sources */,
 				389CBE9A1DEE043D00D3F99C /* NSString+Data.m in Sources */,
 				389CBE4B1DEE03E800D3F99C /* ALPHAObjectPlugin.m in Sources */,
+				B7D722A8214FAAAA006D7F1B /* ALPHAWeakProxy.m in Sources */,
 				38614DF01DFEBCEB001D3209 /* ALPHABonjourDataChunk.m in Sources */,
 				389CBE521DEE03F200D3F99C /* ALPHABluetoothPermission.m in Sources */,
 				389CBE151DEE039000D3F99C /* ALPHAConsolePlugin.m in Sources */,

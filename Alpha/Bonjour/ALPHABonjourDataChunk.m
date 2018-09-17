@@ -13,6 +13,7 @@
 #import "ALPHABonjourDataChunk.h"
 #import "ALPHABonjourDataConnection.h"
 #import "NSScanner+Bonjour.h"
+#import "AlphaDefines.h"
 
 #import <Foundation/NSJSONSerialization.h>
 
@@ -159,7 +160,7 @@
 {
     if (!_totalBytes || [_data length] < _totalBytes)
     {
-        NSLog(@"Insufficient data received yet for decoding object");
+        ALPHALog(@"Insufficient data received yet for decoding object");
         return nil;
     }
     
@@ -181,7 +182,7 @@
     
     if (!object)
     {
-        NSLog(@"Unable to decode object");
+        ALPHALog(@"Unable to decode object");
     }
     
     return object;
@@ -215,7 +216,7 @@
     
     if (!string)
     {
-        NSLog(@"Error decoding header, not a valid NSString");
+        ALPHALog(@"Error decoding header, not a valid NSString");
         return;
     }
     
@@ -245,7 +246,7 @@
     }
     else
     {
-        NSLog(@"Unknown transport type: %@", contentType);
+        ALPHALog(@"Unknown transport type: %@", contentType);
         return;
     }
     
