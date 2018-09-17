@@ -9,9 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "AlphaDefines.h"
+
 extern NSString* const ALPHAShakeMotionNotification;
 extern NSString* const ALPHAInterfaceEventNotification;
+
+#if _INTERNAL_ALPHA_ENABLED
 
 @interface UIApplication (Event)
 
 @end
+
+#endif

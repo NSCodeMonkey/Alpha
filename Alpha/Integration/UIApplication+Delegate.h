@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AlphaDefines.h"
+
+#if _INTERNAL_ALPHA_ENABLED
+
 @interface UIApplication (Delegate)
 
 /*!
@@ -16,3 +20,5 @@
 @property (nonatomic, strong) id alpha_injectedDelegate;
 
 @end
+
+#endif

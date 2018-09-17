@@ -1056,6 +1056,7 @@
 		67E64FF2E08E74238E9AD26C /* ALPHANotificationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPHANotificationConverter.h; sourceTree = "<group>"; };
 		67E64FF512FD6A8D0D3560ED /* ALPHAServerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPHAServerPlugin.m; sourceTree = "<group>"; };
 		67E64FFDA2B5BB9190C09693 /* NSInvocation+Argument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Argument.h"; sourceTree = "<group>"; };
+		B7378A6E214F998D0028BF1B /* AlphaDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlphaDefines.h; sourceTree = "<group>"; };
 		D448E8D75468D126D21BFDDF /* Pods-UICatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-UICatalog/Pods-UICatalog.release.xcconfig"; sourceTree = "<group>"; };
 		FEDA7AAE1B5C12E000BB35FD /* ALPHAApplicationPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPHAApplicationPlugin.h; sourceTree = "<group>"; };
 		FEDA7AAF1B5C12E000BB35FD /* ALPHAApplicationPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPHAApplicationPlugin.m; sourceTree = "<group>"; };
@@ -1589,6 +1590,7 @@
 				67E64D307CFB0230951C8214 /* Utility */,
 				67E64764452D02A7CF397018 /* View */,
 				67E6443967640579E23C145D /* Alpha.h */,
+				B7378A6E214F998D0028BF1B /* AlphaDefines.h */,
 				38C5DB511E0053AD00AE4954 /* AlphaService.h */,
 				38C5DB501E0053A600AE4954 /* Alpha-Info.plist */,
 				38C5DB4F1E00539F00AE4954 /* AlphaService-Info.plist */,

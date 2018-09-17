@@ -12,6 +12,8 @@
 NSString* const ALPHAShakeMotionNotification = @"kALPHAShakeMotionNotification";
 NSString* const ALPHAInterfaceEventNotification = @"kALPHAInterfaceEventNotification";
 
+#if _INTERNAL_ALPHA_ENABLED
+
 @implementation UIApplication (Event)
 
 + (void)load
@@ -36,3 +38,5 @@ NSString* const ALPHAInterfaceEventNotification = @"kALPHAInterfaceEventNotifica
 }
 
 @end
+
+#endif
