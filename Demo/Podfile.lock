@@ -1,16 +1,24 @@
 PODS:
+  - FBRetainCycleDetector (0.1.4)
   - FXKeychain (1.5.3)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
 
 DEPENDENCIES:
   - FXKeychain
+  - MLeaksFinder
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FBRetainCycleDetector
     - FXKeychain
+    - MLeaksFinder
 
 SPEC CHECKSUMS:
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FXKeychain: 2fe54573946ffef634f4e2a2851e6c8f4ea15e76
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
 
-PODFILE CHECKSUM: 9efacc06658d1959ffcf1c2bf4243db6c49684b1
+PODFILE CHECKSUM: 3077731acd3ece286d1a1a394d7314dfc7c1ff1a
 
 COCOAPODS: 1.5.3

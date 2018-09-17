@@ -198,11 +198,12 @@
         
         if (request)
         {
+            __weak __typeof(self) weakSelf = self;
             [source dataForRequest:request completion:^(id newObject, NSError *error)
             {
-                if (newObject)
+                if (weakSelf && newObject)
                 {
-                    [self renderer:renderer pushObject:newObject request:request source:source];
+                    [weakSelf renderer:renderer pushObject:newObject request:request source:source];
                 }
             }];
             
