@@ -13,6 +13,8 @@
 
 #import "ALPHAConverterManager.h"
 
+#import "ALPHAWeakProxy.h"
+
 @interface ALPHAImageRendererViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -211,7 +213,8 @@
 {
     if (screenModel.expiration > 0 && self.source)
     {
-        self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:self.screenModel.expiration target:self selector:@selector(refresh) userInfo:nil repeats:NO];
+        ALPHAWeakProxy *proxy = [ALPHAWeakProxy proxyWithTarget:self];
+        self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:self.screenModel.expiration target:proxy selector:@selector(refresh) userInfo:nil repeats:NO];
     }
     else
     {
@@ -242,10 +245,7 @@
         
         insets.bottom = verticalInset;
     }
-    //self.scrollView.contentInset = UIEdgeInsetsMake(verticalInset, horizontalInset, verticalInset, horizontalInset);
     self.scrollView.contentInset = insets;
-    
-    //ALPHALog(@"Insets: %@", NSStringFromUIEdgeInsets(self.scrollView.contentInset));
 }
 
 @end

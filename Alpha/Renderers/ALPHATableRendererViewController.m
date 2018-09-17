@@ -22,6 +22,7 @@
 #import "ALPHAScreenModel.h"
 #import "ALPHATableScreenModel.h"
 #import "ALPHAScreenManager.h"
+#import "ALPHAWeakProxy.h"
 
 @interface ALPHATableRendererViewController () <UISearchBarDelegate>
 
@@ -548,7 +549,8 @@
             self.refreshControl = [self createRefreshControl];
         }
         
-        self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:self.screenModel.expiration target:self selector:@selector(refresh) userInfo:nil repeats:NO];
+        ALPHAWeakProxy *proxy = [ALPHAWeakProxy proxyWithTarget:self];
+        self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:self.screenModel.expiration target:proxy selector:@selector(refresh) userInfo:nil repeats:NO];
     }
     else
     {

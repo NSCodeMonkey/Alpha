@@ -18,6 +18,8 @@
 
 #import "ALPHAWebRendererViewController.h"
 
+#import "ALPHAWeakProxy.h"
+
 @interface ALPHAWebRendererViewController () <UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
@@ -220,7 +222,8 @@
 {
     if (screenModel.expiration > 0 && self.source)
     {
-        self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:self.screenModel.expiration target:self selector:@selector(refresh) userInfo:nil repeats:NO];
+        ALPHAWeakProxy *proxy = [ALPHAWeakProxy proxyWithTarget:self];
+        self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:self.screenModel.expiration target:proxy selector:@selector(refresh) userInfo:nil repeats:NO];
     }
     else
     {
@@ -228,34 +231,5 @@
         self.refreshTimer = nil;
     }
 }
-
-#pragma mark - Class Helpers
-
-/*
-+ (BOOL)supportsPathExtension:(NSString *)extension
-{
-    BOOL supported = NO;
-    NSSet *supportedExtensions = [self webViewSupportedPathExtensions];
-    if ([supportedExtensions containsObject:[extension lowercaseString]]) {
-        supported = YES;
-    }
-    return supported;
-}
-
-+ (NSSet *)webViewSupportedPathExtensions
-{
-    static NSSet *pathExtenstions = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        // Note that this is not exhaustive, but all these extensions should work well in the web view.
-        // See https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/CreatingContentforSafarioniPhone/CreatingContentforSafarioniPhone.html#//apple_ref/doc/uid/TP40006482-SW7
-        pathExtenstions = [NSSet setWithArray:@[@"jpg", @"jpeg", @"png", @"gif", @"pdf", @"svg", @"tiff", @"3gp", @"3gpp", @"3g2",
-                                                @"3gp2", @"aiff", @"aif", @"aifc", @"cdda", @"amr", @"mp3", @"swa", @"mp4", @"mpeg",
-                                                @"mpg", @"mp3", @"wav", @"bwf", @"m4a", @"m4b", @"m4p", @"mov", @"qt", @"mqv", @"m4v"]];
-        
-    });
-    return pathExtenstions;
-}
-*/
 
 @end
