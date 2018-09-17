@@ -14,6 +14,8 @@
 #import "ALPHAApplicationDelegate.h"
 #import "ALPHAManager.h"
 
+#if _INTERNAL_ALPHA_ENABLED
+
 @implementation UIApplication (Delegate)
 
 + (void)load
@@ -76,3 +78,5 @@
 }
 
 @end
+
+#endif

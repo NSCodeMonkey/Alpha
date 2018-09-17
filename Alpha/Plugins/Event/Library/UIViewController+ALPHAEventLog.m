@@ -13,6 +13,8 @@
 #import "UIViewController+ALPHAEventLog.h"
 #import "ALPHAEventSource.h"
 
+#if _INTERNAL_ALPHA_ENABLED
+
 @implementation UIViewController (ALPHAEventLog)
 
 + (void)load
@@ -53,3 +55,5 @@
 
 
 @end
+
+#endif
