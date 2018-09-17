@@ -18,13 +18,6 @@
 - (NSString *)alpha_BSSID;
 
 /**
- *  Returns MAC address of network adapter
- *
- *  @return MAC address in formatted shape
- */
-- (NSString *)alpha_macAddress;
-
-/**
  *  Returns dictionary of local IP addresses, where key is the network interface
  *  and value is it's corresponding IP address.
  *

@@ -27,7 +27,7 @@
 #import "ALPHAModel.h"
 #import "ALPHATableScreenModel.h"
 
-extern NSString* CTSettingCopyMyPhoneNumber();
+extern NSString* CTSettingCopyMyPhoneNumber(void);
 
 NSString* const ALPHADeviceStatusDataIdentifier = @"com.unifiedsense.alpha.data.status";
 
@@ -94,7 +94,6 @@ NSString* const ALPHADeviceStatusDataIdentifier = @"com.unifiedsense.alpha.data.
                              @{ @"Documents Size" : [self sizeOfFolder: [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]] },
                              @{ @"Sandbox Size" : [self sizeOfFolder:NSHomeDirectory()] },
                              @{ @"Thread Count" : [NSString stringWithFormat:@"%lu", (unsigned long)[UIApplication sharedApplication].alpha_threadCount] },
-                             @{ @"Process Count" : [NSString stringWithFormat:@"%lu", (unsigned long)[UIDevice currentDevice].alpha_processCount] },
                              @{ @"CPU Usage" : [NSString stringWithFormat:@"%lu%%", (unsigned long)([UIApplication sharedApplication].alpha_cpuUsage * 100.0)] }
                      ],
                      @"style" : @(UITableViewCellStyleValue1),
@@ -190,7 +189,6 @@ NSString* const ALPHADeviceStatusDataIdentifier = @"com.unifiedsense.alpha.data.
                              @{ @"Capacity" : [NSByteCountFormatter stringFromByteCount:[UIDevice currentDevice].alpha_diskMarketingSpace countStyle:NSByteCountFormatterCountStyleBinary] },
                              @{ @"Total Capacity" : [NSByteCountFormatter stringFromByteCount:[UIDevice currentDevice].alpha_diskTotalSpace countStyle:NSByteCountFormatterCountStyleBinary] },
                              @{ @"Free Capacity" : [NSByteCountFormatter stringFromByteCount:[UIDevice currentDevice].alpha_diskFreeSpace countStyle:NSByteCountFormatterCountStyleBinary] },
-                             @{ @"Jailbroken" : ALPHAEncodeBool([UIDevice currentDevice].alpha_jailbreakStatus != UIDeviceJailbreakStatusNotJailbroken) },
                              @{ @"Battery level" : [NSString stringWithFormat:@"%ld%%", (long)([UIDevice currentDevice].batteryLevel * 100)] }
                      ],
                      @"style" : @(UITableViewCellStyleValue1),
@@ -225,7 +223,6 @@ NSString* const ALPHADeviceStatusDataIdentifier = @"com.unifiedsense.alpha.data.
     
     sectionData = @{ @"identifier" : @"com.unifiedsense.alpha.data.status.network",
                      @"items" : @[
-                             @{ @"MAC Address" : ALPHAEncodeString([UIDevice currentDevice].alpha_macAddress) },
                              @{ @"SSID" : ALPHAEncodeString([UIDevice currentDevice].alpha_SSID) },
                              @{ @"BSSDID" : ALPHAEncodeString([UIDevice currentDevice].alpha_BSSID) },
                              @{ @"Received Wi-Fi" : [NSByteCountFormatter stringFromByteCount:[UIDevice currentDevice].alpha_receivedWiFi.longLongValue countStyle:NSByteCountFormatterCountStyleBinary] },
