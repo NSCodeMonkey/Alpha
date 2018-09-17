@@ -6,7 +6,8 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import CoreTelephony;
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
 
 #import "NSString+Data.h"
 #import "UIApplication+Information.h"

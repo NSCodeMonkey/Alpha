@@ -6,9 +6,9 @@
 //  Copyright © 2014 Unified Sense. All rights reserved.
 //
 
-@import Foundation;
-@import UIKit;
-@import ObjectiveC.runtime;
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <objc/runtime.h>
 
 extern const unsigned int ALPHANumberOfImplicitArgsKey;
 

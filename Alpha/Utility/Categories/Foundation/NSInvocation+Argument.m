@@ -8,7 +8,7 @@
 
 #import "NSInvocation+Argument.h"
 
-@import ObjectiveC.runtime;
+#import <objc/runtime.h>
 
 #import "NSInvocation+Argument.h"
 

@@ -8,7 +8,7 @@
 
 #import "ALPHAMockObject.h"
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 /*!
  *  Sign up to this notification if you like to receive NSInvocation objects for application delegate events

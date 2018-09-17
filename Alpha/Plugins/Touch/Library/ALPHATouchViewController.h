@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 /*!
  *  This view controller controls the style of the status bar when Touch display

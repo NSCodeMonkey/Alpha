@@ -8,7 +8,7 @@
 
 #import "UIApplication+Version.h"
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @implementation UIApplication (Version)
 

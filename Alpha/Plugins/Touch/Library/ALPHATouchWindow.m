@@ -6,7 +6,7 @@
 //  Copyright © 2014 Unified Sense. All rights reserved.
 //
 
-@import ObjectiveC.runtime;
+#import <objc/runtime.h>
 
 #import "ALPHATouchFingerView.h"
 #import "ALPHATouchWindow.h"

@@ -6,7 +6,7 @@
 //  Copyright © 2014 Unified Sense. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 /*!
  *  Usage: Private to explorer menu, a rendered circle view that displays an icon and is assigned a long pressure

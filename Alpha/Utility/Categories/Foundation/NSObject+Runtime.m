@@ -6,7 +6,7 @@
 //  Copyright © 2016 Unified Sense. All rights reserved.
 //
 
-@import ObjectiveC.runtime;
+#import <objc/runtime.h>
 
 #import "NSObject+Runtime.h"
 

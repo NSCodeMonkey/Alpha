@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import Security;
+#import <Security/Security.h>
 
 #import "ALPHAKeychainItem.h"
 

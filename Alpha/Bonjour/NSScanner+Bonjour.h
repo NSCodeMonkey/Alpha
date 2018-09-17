@@ -10,7 +10,7 @@
 // This file is ported from DTBonjour library, by Oliver Drobnik
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 /**
  Category extension for `NSScanner` to deal with scanning the headers used by ALPHABonjour

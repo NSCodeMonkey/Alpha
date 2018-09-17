@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import AVFoundation;
+#import <AVFoundation/AVFoundation.h>
 
 #import "ALPHAVideoPermission.h"
 

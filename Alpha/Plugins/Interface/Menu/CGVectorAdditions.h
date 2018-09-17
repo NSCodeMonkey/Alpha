@@ -9,8 +9,8 @@
 #ifndef __CG_VECTOR_ADDITIONS_H
 #define __CG_VECTOR_ADDITIONS_H
 
-@import CoreGraphics;
-@import Foundation;
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 #include <math.h>
 

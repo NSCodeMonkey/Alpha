@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import CoreLocation;
+#import <CoreLocation/CoreLocation.h>
 
 #import "ALPHARuntimeUtility.h"
 

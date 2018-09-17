@@ -6,8 +6,8 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import Contacts;
-@import AddressBook;
+#import <Contacts/Contacts.h>
+#import <AddressBook/AddressBook.h>
 
 #import "ALPHAContactPermission.h"
 

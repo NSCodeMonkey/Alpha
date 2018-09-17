@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import Photos;
+#import <Photos/Photos.h>
 
 #import "ALPHAAssetPermission.h"
 

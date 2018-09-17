@@ -6,8 +6,8 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import Foundation;
-@import UIKit;
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef void(^ALPHACompletionBlock)(void);
 

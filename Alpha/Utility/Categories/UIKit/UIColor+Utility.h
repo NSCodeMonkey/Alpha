@@ -8,7 +8,7 @@
 
 #define ALPHAColorFromKey(color) [UIColor alpha_colorWithHex:color]
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UIColor (Utility)
 

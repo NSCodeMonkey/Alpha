@@ -8,7 +8,7 @@
 
 #import "NSObject+Runtime.h"
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 @interface NSObject (Runtime)
 

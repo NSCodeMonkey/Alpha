@@ -10,7 +10,7 @@
 // This file is ported from DTBonjour library, by Oliver Drobnik
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 
 #import "ALPHABonjourDataConnection.h"

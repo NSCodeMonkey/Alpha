@@ -11,7 +11,7 @@
 
 #import "UIApplication+Screenshot.h"
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @implementation UIApplication (Screenshot)
 

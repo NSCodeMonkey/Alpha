@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 int TCCAccessRequest(NSString *service, NSString *message, int completion); // Triggers permission request
 int TCCAccessPreflight(NSString *service); // Checks for permission settings

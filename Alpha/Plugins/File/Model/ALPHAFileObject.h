@@ -8,7 +8,7 @@
 
 #import "ALPHASerialization.h"
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface ALPHAFileObject : NSObject <ALPHASerializableItem>
 

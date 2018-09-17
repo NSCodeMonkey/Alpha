@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 /*!
  *  This object is used internally to track connections made out

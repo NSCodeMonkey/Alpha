@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 /*!
  *  Represents a single view on screen.

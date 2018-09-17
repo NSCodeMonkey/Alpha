@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import EventKit;
+#import <EventKit/EventKit.h>
 
 #import "ALPHAPermission.h"
 

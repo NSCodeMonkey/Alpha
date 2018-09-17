@@ -8,7 +8,7 @@
 
 #import "NSObject+Property.h"
 
-@import ObjectiveC.runtime;
+#import <objc/runtime.h>
 
 #import "NSObject+Property.h"
 

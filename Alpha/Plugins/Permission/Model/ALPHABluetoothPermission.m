@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import CoreBluetooth;
+#import <CoreBluetooth/CoreBluetooth.h>
 
 #import "ALPHABluetoothPermission.h"
 

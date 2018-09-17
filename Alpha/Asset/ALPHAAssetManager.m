@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import ObjectiveC.runtime;
+#import <objc/runtime.h>
 
 #import "ALPHACache.h"
 

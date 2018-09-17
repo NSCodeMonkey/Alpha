@@ -8,7 +8,7 @@
 
 #import <dlfcn.h>
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 #import "ALPHARuntimeUtility.h"
 #import "ALPHAHeapUtility.h"

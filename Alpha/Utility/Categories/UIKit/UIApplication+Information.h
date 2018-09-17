@@ -6,7 +6,7 @@
 //  Copyright © 2016 Unified Sense. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UIApplication (Information)
 

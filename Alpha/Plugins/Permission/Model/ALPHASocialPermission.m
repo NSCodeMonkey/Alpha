@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import Accounts;
+#import <Accounts/Accounts.h>
 
 #import "NSString+Identifier.h"
 

@@ -14,7 +14,7 @@
 
 #import "UIApplication+Information.h"
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @implementation UIApplication (Information)
 

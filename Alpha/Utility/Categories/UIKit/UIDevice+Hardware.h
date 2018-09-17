@@ -5,7 +5,7 @@
 //  Created by Dal Rupnik on 29/11/2016.
 //  Copyright © 2016 Unified Sense. All rights reserved.
 //
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 /*!
  * Category displays detailed information about current device hardware

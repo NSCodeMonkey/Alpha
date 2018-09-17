@@ -8,9 +8,9 @@
 
 #import "UIDevice+Software.h"
 
-@import Darwin.POSIX.sys.stat;
-@import Darwin.POSIX.pwd;
-@import Darwin.POSIX.grp;
+#import <sys/stat.h>
+#import <pwd.h>
+#import <grp.h>
 #import <sys/types.h>
 #import <sys/sysctl.h>
 #import <sys/utsname.h>

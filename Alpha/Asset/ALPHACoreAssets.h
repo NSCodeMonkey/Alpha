@@ -6,8 +6,8 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import Foundation;
-@import CoreGraphics;
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 #import "ALPHAAsset.h"
 #import "ALPHAAssetManager.h"

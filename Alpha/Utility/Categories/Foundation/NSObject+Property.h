@@ -6,7 +6,7 @@
 //  Copyright © 2016 Unified Sense. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 @interface NSObject (Property)
 

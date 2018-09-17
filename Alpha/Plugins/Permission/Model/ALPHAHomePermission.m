@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import HomeKit;
+#import <HomeKit/HomeKit.h>
 
 #import "ALPHAHomePermission.h"
 

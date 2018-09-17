@@ -5,7 +5,7 @@
 //  Copyright © 2014 Christian Klaproth. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @protocol ALPHACircleMenuDelegate <NSObject>
 

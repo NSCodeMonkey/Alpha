@@ -10,8 +10,8 @@
 // This file is ported from DTBonjour library, by Oliver Drobnik
 //
 
-@import Foundation;
-@import CoreFoundation;
+#import <Foundation/Foundation.h>
+#import <CoreFoundation/CoreFoundation.h>
 
 /**
  Type of encoding to use for sending objects

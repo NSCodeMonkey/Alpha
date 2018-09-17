@@ -6,7 +6,7 @@
 //  Copyright © 2015 Unified Sense. All rights reserved.
 //
 
-@import HealthKit;
+#import <HealthKit/HealthKit.h>
 
 #import "NSString+Identifier.h"
 
