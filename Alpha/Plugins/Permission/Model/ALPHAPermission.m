@@ -8,6 +8,7 @@
 
 #import "NSString+Identifier.h"
 #import "ALPHAPermission.h"
+#import "AlphaDefines.h"
 
 NSString* NSStringFromAuthorizationStatus (ALPHAApplicationAuthorizationStatus status)
 {
@@ -75,7 +76,7 @@ NSString* NSStringFromAuthorizationStatus (ALPHAApplicationAuthorizationStatus s
 {
     // Abstract
     
-    NSLog(@"Requesting permission: %@", self.identifier);
+    ALPHALog(@"Requesting permission: %@", self.identifier);
 }
 
 - (void)resetPermission:(void (^)(BOOL))completion

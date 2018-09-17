@@ -12,6 +12,7 @@
 
 #import "ALPHARuntimeUtility.h"
 #import "ALPHAHeapUtility.h"
+#import "AlphaDefines.h"
 
 // See https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtPropertyIntrospection.html#//apple_ref/doc/uid/TP40008048-CH101-SW6
 NSString *const ALPHAUtilityAttributeTypeEncoding = @"T";
@@ -61,7 +62,7 @@ const unsigned int ALPHANumberOfImplicitArgsKey = 2;
     
     BOOL success = [b load];
     
-    NSLog(@"Success: %@: %d", path, (int)success);
+    ALPHALog(@"Success: %@: %d", path, (int)success);
     return success;
 }
 

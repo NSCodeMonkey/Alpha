@@ -9,6 +9,7 @@
 #import "ALPHATCC.h"
 #import "ALPHATCCAccessManager.h"
 #import "ALPHATCCPermission.h"
+#import "AlphaDefines.h"
 
 @interface ALPHATCCPermission ()
 
@@ -32,13 +33,13 @@
     
     int access = TCCAccessRequest(self.identifier, @"Alpha is requesting permission", 0);
     
-    NSLog(@"Access: %d", access);
+    ALPHALog(@"Access: %d", access);
 }
 
 - (ALPHAApplicationAuthorizationStatus)status {
     int access = TCCAccessPreflight(self.identifier);
     
-    NSLog(@"Access: %d", access);
+    ALPHALog(@"Access: %d", access);
     
     return access;
 }

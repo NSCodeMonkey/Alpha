@@ -13,6 +13,7 @@
 #import "ALPHABonjourDataConnection.h"
 #import "ALPHABonjourDataChunk.h"
 #import "NSScanner+Bonjour.h"
+#import "AlphaDefines.h"
 
 #import <Foundation/NSJSONSerialization.h>
 
@@ -431,7 +432,7 @@ typedef enum
             
         case NSStreamEventErrorOccurred:
         {
-            NSLog(@"Error occurred: %@", [aStream.streamError localizedDescription]);
+            ALPHALog(@"Error occurred: %@", [aStream.streamError localizedDescription]);
             
             // Intentional fall-through.
         }

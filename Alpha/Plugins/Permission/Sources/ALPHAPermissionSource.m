@@ -210,7 +210,7 @@ NSString* const ALPHAActionPermissionResetIdentifier = @"com.unifiedsense.alpha.
             {
                 if (success)
                 {
-                    //NSLog(@"RESET PERMISSION: %d", (int)success);
+                    //ALPHALog(@"RESET PERMISSION: %d", (int)success);
                 }
             }];
         }

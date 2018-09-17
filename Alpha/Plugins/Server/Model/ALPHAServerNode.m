@@ -68,7 +68,7 @@
     // We had received an object, we assume it is bonjour object, but make a check to prevent crashing.
     //
     
-    //NSLog(@"SERVER RECEIVING OBJECT: %@ CONN: %@", object, connection);
+    //ALPHALog(@"SERVER RECEIVING OBJECT: %@ CONN: %@", object, connection);
     
     if (![object isKindOfClass:[ALPHANetworkObject class]] || !self.source)
     {

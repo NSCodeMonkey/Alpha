@@ -245,7 +245,7 @@
     //self.scrollView.contentInset = UIEdgeInsetsMake(verticalInset, horizontalInset, verticalInset, horizontalInset);
     self.scrollView.contentInset = insets;
     
-    //NSLog(@"Insets: %@", NSStringFromUIEdgeInsets(self.scrollView.contentInset));
+    //ALPHALog(@"Insets: %@", NSStringFromUIEdgeInsets(self.scrollView.contentInset));
 }
 
 @end

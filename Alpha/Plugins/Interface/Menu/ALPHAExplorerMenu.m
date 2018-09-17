@@ -138,7 +138,7 @@
 
 - (void)handleMenuDrag:(UIGestureRecognizer *)recognizer
 {
-    //NSLog(@"MENU DRAG!");
+    //ALPHALog(@"MENU DRAG!");
     
     CGFloat increaseFactor = 1.5;
     
@@ -266,14 +266,14 @@
     
     self.center = min;
     
-    //NSLog(@"Moving to: %@", NSStringFromCGPoint(min));
+    //ALPHALog(@"Moving to: %@", NSStringFromCGPoint(min));
     
     [self updateContextPosition];
 }
 
 - (void)handleMenuTap:(UIGestureRecognizer *)recognizer
 {
-    //NSLog(@"Recognizer state: %d", recognizer.state);
+    //ALPHALog(@"Recognizer state: %d", recognizer.state);
     
     if (recognizer.state == UIGestureRecognizerStateBegan)
     {
@@ -387,10 +387,10 @@
     CGFloat topAngle = [self checkAndCalculateAngleBetweenPoints:pointsTop center:menuCenter];
     CGFloat bottomAngle = [self checkAndCalculateAngleBetweenPoints:pointsBottom center:menuCenter];
     
-    //NSLog(@"Left: %f", leftAngle);
-    //NSLog(@"Right: %f", rightAngle);
-    //NSLog(@"Top: %f", topAngle);
-    //NSLog(@"Bottom: %f", bottomAngle);
+    //ALPHALog(@"Left: %f", leftAngle);
+    //ALPHALog(@"Right: %f", rightAngle);
+    //ALPHALog(@"Top: %f", topAngle);
+    //ALPHALog(@"Bottom: %f", bottomAngle);
     
     //
     // Calculate available angle
@@ -489,7 +489,7 @@
     
     self.angle = totalAngle;
     
-    //NSLog(@"Total: %f", totalAngle);
+    //ALPHALog(@"Total: %f", totalAngle);
     
     [self bringSubviewToFront:self.centerView];
     

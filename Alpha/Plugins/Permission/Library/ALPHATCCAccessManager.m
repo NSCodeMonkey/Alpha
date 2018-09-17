@@ -8,6 +8,7 @@
 
 #import "ALPHATCC.h"
 #import "ALPHATCCAccessManager.h"
+#import "AlphaDefines.h"
 
 //
 // These symbols are extracted from TCC.framework/TCC binary
@@ -34,7 +35,7 @@ NSString *const ALPHATCCAccessWillow                    = @"kTCCServiceWillow";
 + (void)test
 {
     int access = TCCAccessRequest(ALPHATCCAccessBluetoothPeripheral, @"Testy", 0);
-    NSLog(@"Access: %d", access);
+    ALPHALog(@"Access: %d", access);
 }
 
 + (NSArray *)accessIdentifiers {

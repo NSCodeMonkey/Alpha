@@ -22,6 +22,8 @@
 #import "ALPHABonjourDataConnection.h"
 #import "ALPHABonjourDataChunk.h"
 
+#import "AlphaDefines.h"
+
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 #endif
@@ -72,7 +74,7 @@ static void ListeningSocketCallback(CFSocketRef s, CFSocketCallBackType type, CF
         port = ntohs(addr6.sin6_port);
     }
     
-    NSLog(@"Accepting %@ connection from %@ on port %d", familyString, ipString, (int)port);
+    ALPHALog(@"Accepting %@ connection from %@ on port %d", familyString, ipString, (int)port);
     
     // For an accept callback, the data parameter is a pointer to a CFSocketNativeHandle.
     [server _acceptConnection:*(CFSocketNativeHandle *)data];
@@ -363,7 +365,7 @@ static void ListeningSocketCallback(CFSocketRef s, CFSocketCallBackType type, CF
         
         if (![connection sendObject:object error:&error])
         {
-            NSLog(@"%@", [error localizedDescription]);
+            ALPHALog(@"%@", [error localizedDescription]);
         }
     }
 }
@@ -372,17 +374,17 @@ static void ListeningSocketCallback(CFSocketRef s, CFSocketCallBackType type, CF
 
 - (void)netService:(NSNetService *)sender didNotPublish:(NSDictionary *)errorDict
 {
-    NSLog(@"Error publishing: %@", errorDict);
+    ALPHALog(@"Error publishing: %@", errorDict);
 }
 
 - (void)netServiceDidPublish:(NSNetService *)sender
 {
-    NSLog(@"My name: %@ port: %d", [sender name], (int)sender.port);
+    ALPHALog(@"My name: %@ port: %d", [sender name], (int)sender.port);
 }
 
 - (void)netServiceDidStop:(NSNetService *)sender
 {
-    NSLog(@"Bonjour Service shut down");
+    ALPHALog(@"Bonjour Service shut down");
 }
 
 #pragma mark - ALPHABonjourDataConnection Delegate
