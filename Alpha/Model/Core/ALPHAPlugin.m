@@ -121,4 +121,9 @@
     [self.baseSources addObject:source];
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"id = %@\ntitle = %@\nenabled = %d\n", self.identifier, self.title, self.isEnabled];
+}
+
 @end

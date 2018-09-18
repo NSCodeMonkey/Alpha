@@ -681,6 +681,13 @@
 
 - (BOOL)shouldReceiveTouchAtWindowPoint:(CGPoint)pointInWindowCoordinates
 {
+    BOOL isInViewHierarchy = self.nextResponder != nil;
+    BOOL isDisplaying = isInViewHierarchy && !self.view.isHidden;
+    if (!isDisplaying)
+    {
+        return NO;
+    }
+    
     BOOL shouldReceiveTouch = NO;
     
     CGPoint pointInLocalCoordinates = [self.view convertPoint:pointInWindowCoordinates fromView:nil];
