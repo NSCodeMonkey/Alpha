@@ -145,10 +145,12 @@
 + (instancetype)defaultManager
 {
     static ALPHAManager *sharedManager = nil;
+#if _INTERNAL_ALPHA_ENABLED
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[[self class] alloc] init];
     });
+#endif
     return sharedManager;
 }
 
